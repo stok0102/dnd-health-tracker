@@ -1,24 +1,3 @@
-# README
+# DND Rails/React Practice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Using tutorial from [Fernando Villalobos](https://github.com/fervisa) (found [here](https://www.airpair.com/reactjs/posts/reactjs-a-guide-for-rails-developers)) to integrate a single page React front end to a Rails app
