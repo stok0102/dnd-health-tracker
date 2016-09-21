@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root to: 'character#index'
+  # root to: 'characters#index'
   resources :characters
 end

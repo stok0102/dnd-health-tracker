@@ -20,6 +20,7 @@
 
   render: ->
     React.DOM.form
+      onSubmit: @handleSubmit
       className: 'form-inline'
       React.DOM.div
         className: 'form-group'

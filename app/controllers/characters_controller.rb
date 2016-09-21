@@ -1,4 +1,4 @@
-class CharacterController < ApplicationController
+class CharactersController < ApplicationController
   def index
     @characters = Character.all
   end
@@ -13,9 +13,9 @@ class CharacterController < ApplicationController
     end
   end
 
-private
+  private
 
-  def character_params
-    params.require(:character).permit(:character_name, :level, :character_class)
-  end
+    def character_params
+      params.require(:character).permit(:character_name, :level, :character_class)
+    end
 end
