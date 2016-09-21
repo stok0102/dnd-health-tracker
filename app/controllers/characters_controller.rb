@@ -19,6 +19,15 @@ class CharactersController < ApplicationController
     head :no_content
   end
 
+  def update
+    @character = Character.find(params[:id])
+    if @character.update(character_params)
+      render json: @character
+    else
+      render json: @character.errors, status: :unprocessable_entity
+    end
+  end
+
   private
 
     def character_params

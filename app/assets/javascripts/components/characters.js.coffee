@@ -14,6 +14,11 @@
     characters = React.addons.update(@state.characters, { $splice: [[index, 1]] })
     @replaceState characters: characters
 
+  updateCharacter: (character, data) ->
+    index = @state.characters.indexOf character
+    characters = React.addons.update(@state.characters, { $splice: [[index, 1, data]] })
+    @replaceState characters: characters
+
   render: ->
     React.DOM.div
       className: 'characters'
@@ -32,4 +37,4 @@
             React.DOM.th null, 'Actions'
         React.DOM.tbody null,
           for character in @state.characters
-            React.createElement Character, key: character.id, character: character, handleDeleteCharacter: @deleteCharacter
+            React.createElement Character, key: character.id, character: character, handleDeleteCharacter: @deleteCharacter, handleEditCharacter: @updateCharacter
