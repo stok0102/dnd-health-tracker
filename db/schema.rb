@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160921173034) do
+ActiveRecord::Schema.define(version: 20160921190647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "characters", force: :cascade do |t|
-    t.string   "name"
+    t.string   "character_name"
     t.string   "race"
     t.string   "character_class"
     t.string   "alignment"

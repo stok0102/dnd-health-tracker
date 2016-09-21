@@ -1,0 +1,22 @@
+= simple_form_for @character do |f|
+  .row
+    .col-xs-4
+      = f.input :name
+      = f.input :race
+      = f.input :character_class
+      = f.input :alignment
+      = f.input :level
+    .col-xs-4
+      = f.input :strength
+      = f.input :dexterity
+      = f.input :constitution
+      = f.input :intelligence
+      = f.input :wisdom
+      = f.input :charisma
+    .col-xs-4
+      = f.input :hit_points
+      = f.input :armor_class
+      %hr
+      = f.input :fortitude
+      = f.input :reflex
+      = f.input :will
