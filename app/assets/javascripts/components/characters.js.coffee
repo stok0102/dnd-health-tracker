@@ -6,14 +6,12 @@
     characters: []
 
   addCharacter: (character) ->
-    characters = @state.characters.slice()
-    characters.push character
+    characters = React.addons.update(@state.characters, { $push: [character] })
     @setState characters: characters
 
   deleteCharacter: (character) ->
-    characters = @state.characters.slice()
-    index = characters.indexOf character
-    characters.splice index, 1
+    index = @state.characters.indexOf character
+    characters = React.addons.update(@state.characters, { $splice: [[index, 1]] })
     @replaceState characters: characters
 
   render: ->
